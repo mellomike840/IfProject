@@ -13,12 +13,25 @@ public class Scale
 	private String scaleDegrees;
 	private int degreeCount;
 	
-	
+	/**
+	 * Default Constructor for a scale
+	 * Initializes all variables to valid but bad values
+	 * Used for later customization
+	 */
 	public Scale()
 	{
-		//default Constructor
+		this.scaleName = "no scale";
+		this.scaleDegrees = "no degrees";
+		this.degreeCount = -99;
 	}
 	
+	
+	/**
+	 * Initializes a Scale Instance. 
+	 * @param scaleName, the name of the scale 
+	 * @param scaleDegrees, the degrees 	
+	 * @param degreeCount, the amount of degrees in the scale
+	 */
 	public Scale(String scaleName, String scaleDegrees, int degreeCount)
 	{
 		this.scaleName = scaleName;
