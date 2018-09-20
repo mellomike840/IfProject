@@ -40,5 +40,37 @@ public class Scale
 	}
 	
 	
+	public String getScaleName()
+	{
+		return scaleName;
+	}
+	
+	public String getScaleDegrees()
+	{
+		return scaleDegrees;
+	}
+	
+	public int getDegreeCount()
+	{
+		return degreeCount;
+	}
+	
+	
+	
+	public void setScaleName(String scaleName)
+	{
+		this.scaleName = scaleName;
+	}
+	
+	public void setScaleDegrees(String scaleDegrees)
+	{
+		this.scaleDegrees = scaleDegrees;
+	}
+	
+	public void setDegreeCount(int degreeCount)
+	{
+		this.degreeCount = degreeCount;
+	}
+	
 	
 }
