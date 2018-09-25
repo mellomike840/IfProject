@@ -46,7 +46,29 @@ public class IfController
 		JOptionPane.showMessageDialog(null, "The degrees are: " + userScale.getScaleDegrees());
 		
 		
-		
+		boolean correct = false;
+		while(!correct)
+		{
+			
+			String userResponse = JOptionPane.showInputDialog("How many scale degrees are in your Ionian Scale: ");
+			int response = 0;
+			if(validInt(userResponse))
+			{
+				response = Integer.parseInt(userResponse);
+			}
+			if(response == degrees)
+			{
+				JOptionPane.showMessageDialog(null, "Correct.");
+				correct = true;
+			}
+			else
+			{
+				JOptionPane.showMessageDialog(null, "Incoreect.");
+			}
+			
+			
+			
+		}
 		
 		
 		
