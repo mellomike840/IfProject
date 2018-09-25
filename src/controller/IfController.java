@@ -23,6 +23,8 @@ public class IfController
 	 */
 	public void start()
 	{
+		
+		
 		String userInput = JOptionPane.showInputDialog("Enter the name of a scale: ");
 		userScale.setScaleName(userInput);
 		
@@ -42,6 +44,33 @@ public class IfController
 		JOptionPane.showMessageDialog(null, "This scale is called the " + userScale.getScaleName() + " scale.");
 		JOptionPane.showMessageDialog(null, "This scale has a total of " + userScale.getDegreeCount() + " scale degrees.");
 		JOptionPane.showMessageDialog(null, "The degrees are: " + userScale.getScaleDegrees());
+		
+		
+		
+		
+		
+		
+		
+		/*
+		String userInput = JOptionPane.showInputDialog("Enter a large whole number: ");
+		int userNumber = 0;
+		int userNumberTwo = 0;
+		if(validInt(userInput))
+		{
+			userNumber = Integer.parseInt(userInput);
+		}
+		userInput = JOptionPane.showInputDialog("Enter another large whole number: ");
+		if(validInt(userInput))
+		{
+			userNumberTwo = Integer.parseInt(userInput);
+		}
+		
+		additionGame(userNumber, userNumberTwo);
+		*/
+		
+		
+		
+		
 	}
 	
 	
@@ -61,5 +90,72 @@ public class IfController
 		return isValid;
 		
 	}
+	
+	
+	//private: only this class can see it, can only call it inside this object/class 
+	private void loopy()
+	{
+		
+		//define a variable before the loop
+		boolean isFinished = false;
+		int i = 0;
+		// ! <-"not", makes it the opposite 
+		while(!isFinished)
+		{
+			JOptionPane.showMessageDialog(null, "Oof");
+			i+= 1;
+			
+			if(i >= 3) 
+			{
+			isFinished  = true;
+			}
+			
+			
+			
+		}
+		
+		/*
+		String response = JOptionPane.showInputDialog("Whats your favorite whole number?");
+		while(!validInt(response))
+		{
+			response = JOptionPane.showInputDialog("Not a goo enough number.");
+		}
+		*/
+		
+		
+	}
+	
+	
+	
+	private void additionGame(int x, int y)
+	{
+		boolean correct = false;
+		int answer = x + y;
+		
+		while(!correct)
+		{
+			
+			String userInput = JOptionPane.showInputDialog("What is " + x + " + " + y + ": ");
+			int userAnswer = 0;
+			if(validInt(userInput))
+			{
+				userAnswer = Integer.parseInt(userInput);
+			}
+			
+			if(userAnswer == answer)
+			{
+				JOptionPane.showMessageDialog(null, "Correct.");
+				correct = true;
+			}
+			else
+			{
+				JOptionPane.showMessageDialog(null, "Incorrect.");
+			}
+	
+		}
+		
+	}
+	
+	
 	
 }
