@@ -35,17 +35,25 @@ public class IfController
 		
 		userInput = JOptionPane.showInputDialog("Enter the amount of scale degrees there are: ");
 		int degrees = -99;
-		if(validInt(userInput))
+		boolean isValid = validInt(userInput);
+		while(!isValid)
 		{
-			degrees = Integer.parseInt(userInput);
+			userInput = JOptionPane.showInputDialog("Enter the amount of scale degrees there are: ");
+			if(validInt(userInput))
+			{
+				degrees = Integer.parseInt(userInput);
+				isValid = true;
+			}
+			
 		}
 		userScale.setDegreeCount(degrees);
+		
 		
 		JOptionPane.showMessageDialog(null, "This scale is called the " + userScale.getScaleName() + " scale.");
 		JOptionPane.showMessageDialog(null, "This scale has a total of " + userScale.getDegreeCount() + " scale degrees.");
 		JOptionPane.showMessageDialog(null, "The degrees are: " + userScale.getScaleDegrees());
 		
-		
+		/*
 		boolean correct = false;
 		while(!correct)
 		{
@@ -65,10 +73,10 @@ public class IfController
 			{
 				JOptionPane.showMessageDialog(null, "Incoreect.");
 			}
+			*/
 			
-			
-			
-		}
+		
+		
 		
 		
 		
@@ -92,7 +100,7 @@ public class IfController
 		
 		
 		
-		
+
 	}
 	
 	
