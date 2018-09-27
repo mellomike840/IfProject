@@ -23,7 +23,7 @@ public class IfController
 	 */
 	public void start()
 	{
-		
+		loopy();
 		
 		String userInput = JOptionPane.showInputDialog("Enter the name of a scale: ");
 		userScale.setScaleName(userInput);
@@ -53,53 +53,8 @@ public class IfController
 		JOptionPane.showMessageDialog(null, "This scale has a total of " + userScale.getDegreeCount() + " scale degrees.");
 		JOptionPane.showMessageDialog(null, "The degrees are: " + userScale.getScaleDegrees());
 		
-		/*
-		boolean correct = false;
-		while(!correct)
-		{
-			
-			String userResponse = JOptionPane.showInputDialog("How many scale degrees are in your Ionian Scale: ");
-			int response = 0;
-			if(validInt(userResponse))
-			{
-				response = Integer.parseInt(userResponse);
-			}
-			if(response == degrees)
-			{
-				JOptionPane.showMessageDialog(null, "Correct.");
-				correct = true;
-			}
-			else
-			{
-				JOptionPane.showMessageDialog(null, "Incoreect.");
-			}
-			*/
-			
 		
-		
-		
-		
-		
-		
-		/*
-		String userInput = JOptionPane.showInputDialog("Enter a large whole number: ");
-		int userNumber = 0;
-		int userNumberTwo = 0;
-		if(validInt(userInput))
-		{
-			userNumber = Integer.parseInt(userInput);
-		}
-		userInput = JOptionPane.showInputDialog("Enter another large whole number: ");
-		if(validInt(userInput))
-		{
-			userNumberTwo = Integer.parseInt(userInput);
-		}
-		
-		additionGame(userNumber, userNumberTwo);
-		*/
-		
-		
-		
+	
 
 	}
 	
@@ -145,44 +100,13 @@ public class IfController
 		}
 		
 		/*
-		String response = JOptionPane.showInputDialog("Whats your favorite whole number?");
+		String response = JOptionPane.showInputDialog("What's your favorite whole number?");
 		while(!validInt(response))
 		{
 			response = JOptionPane.showInputDialog("Not a goo enough number.");
 		}
 		*/
 		
-		
-	}
-	
-	
-	
-	private void additionGame(int x, int y)
-	{
-		boolean correct = false;
-		int answer = x + y;
-		
-		while(!correct)
-		{
-			
-			String userInput = JOptionPane.showInputDialog("What is " + x + " + " + y + ": ");
-			int userAnswer = 0;
-			if(validInt(userInput))
-			{
-				userAnswer = Integer.parseInt(userInput);
-			}
-			
-			if(userAnswer == answer)
-			{
-				JOptionPane.showMessageDialog(null, "Correct.");
-				correct = true;
-			}
-			else
-			{
-				JOptionPane.showMessageDialog(null, "Incorrect.");
-			}
-	
-		}
 		
 	}
 	
