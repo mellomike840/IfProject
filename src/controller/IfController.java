@@ -14,7 +14,7 @@ public class IfController
 	 */
 	public IfController()
 	{
-		userScale = new Scale();
+
 	}
 	
 	
@@ -25,6 +25,24 @@ public class IfController
 	{
 		loopy();
 		
+		
+		
+		for(int i = 1; i < 8; i += 1)
+		{
+			askUser();
+			JOptionPane.showMessageDialog(null, "This is scale number " + i);
+		}
+		
+	
+	}
+	
+	
+	
+	private void askUser()
+	{
+		
+		userScale = new Scale();
+		
 		String userInput = JOptionPane.showInputDialog("Enter the name of a scale: ");
 		userScale.setScaleName(userInput);
 		
@@ -33,9 +51,8 @@ public class IfController
 		userScale.setScaleDegrees(userInput);
 		
 		
-		userInput = JOptionPane.showInputDialog("Enter the amount of scale degrees there are: ");
 		int degrees = -99;
-		boolean isValid = validInt(userInput);
+		boolean isValid = false;
 		while(!isValid)
 		{
 			userInput = JOptionPane.showInputDialog("Enter the amount of scale degrees there are: ");
@@ -49,14 +66,15 @@ public class IfController
 		userScale.setDegreeCount(degrees);
 		
 		
-		JOptionPane.showMessageDialog(null, "This scale is called the " + userScale.getScaleName() + " scale.");
-		JOptionPane.showMessageDialog(null, "This scale has a total of " + userScale.getDegreeCount() + " scale degrees.");
-		JOptionPane.showMessageDialog(null, "The degrees are: " + userScale.getScaleDegrees());
-		
-		
-	
 
+		JOptionPane.showMessageDialog(null, userScale);
+		
+		
+		
 	}
+	
+	
+	
 	
 	
 	public boolean validInt(String maybeInt)

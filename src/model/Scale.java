@@ -1,5 +1,7 @@
 package model;
 
+import javax.swing.JOptionPane;
+
 public class Scale
 {
 	//declaration section
@@ -71,6 +73,28 @@ public class Scale
 	{
 		this.degreeCount = degreeCount;
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public String toString()
+	{
+		String description = "This scale is called the " + getScaleName() + " scale.\n"
+							+ "This scale has a total of " + getDegreeCount() + " scale degrees.\n"
+							+ "The degrees are: " + getScaleDegrees();
+	
+		return description;
+				
+	}
+	
+	
+	
 	
 	
 }
