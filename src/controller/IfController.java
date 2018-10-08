@@ -1,7 +1,14 @@
 package controller;
 
 import model.Scale;
+
+//************************
+import java.util.ArrayList;
+
+import java.util.AbstractList;
+
 import javax.swing.JOptionPane;
+//import java.util;
 
 public class IfController
 {
@@ -15,6 +22,8 @@ public class IfController
 	public IfController()
 	{
 
+		
+
 	}
 	
 	
@@ -23,18 +32,36 @@ public class IfController
 	 */
 	public void start()
 	{
-		loopy();
-		
-		
-		
-		for(int i = 1; i < 8; i += 1)
-		{
-			askUser();
-			JOptionPane.showMessageDialog(null, "This is scale number " + i);
-		}
-		
 	
+		/* *********** EXAMPLE **********
+			String pumpkin = new String();
+			
+			ArrayList<String>Halloween = new ArrayList <String>();
+			
+			Halloween.add("ghoul");
+			Halloween.add("spooky");
+			
+			JOptionPane.showMessageDialog(null, Halloween);
+			
+		*/
+		
+		
+		
+		ArrayList();
+			
+
+		
+
 	}
+	
+	
+	
+
+
+	
+	
+	
+	
 	
 	
 	
@@ -72,9 +99,6 @@ public class IfController
 		
 		
 	}
-	
-	
-	
 	
 	
 	public boolean validInt(String maybeInt)
@@ -127,6 +151,37 @@ public class IfController
 		
 		
 	}
+	
+	
+	private void loopyloop()
+	{
+		
+		int amount = 0;
+		String userLoop = JOptionPane.showInputDialog("Enter a string you want to loop: ");
+		boolean isValid = false;
+		while(!isValid)
+		{
+			String userAmount = JOptionPane.showInputDialog("Enter how many times you want to loop this message: ");
+			if(validInt(userAmount))
+			{
+				amount = Integer.parseInt(userAmount);
+				isValid = true;
+			}
+		}
+	
+	
+		String TheLoop = userLoop + "\n";
+		for(int x = 1; x < amount; x++)
+		{
+			TheLoop += userLoop + "\n";
+		}
+		
+		
+		JOptionPane.showMessageDialog(null, TheLoop);	
+	}     
+	
+	
+	
 	
 	
 	
